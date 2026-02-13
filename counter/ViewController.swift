@@ -15,16 +15,16 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet private weak var counterLabel: UILabel!
     
-    @IBOutlet weak var incrementButton: UIButton!
+    @IBOutlet private weak var incrementButton: UIButton!
     
-    @IBOutlet weak var decrementButton: UIButton!
+    @IBOutlet private weak var decrementButton: UIButton!
     
-    @IBOutlet weak var refreshCounterButton: UIButton!
+    @IBOutlet private weak var refreshCounterButton: UIButton!
     
     
-    @IBOutlet weak var counterHistoryTextView: UITextView!
+    @IBOutlet private weak var counterHistoryTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         incrementButton.tintColor = .systemGreen
@@ -32,15 +32,15 @@ class ViewController: UIViewController {
         counterLabel.text = "\(counter)"
         setUpTextView()
     }
-
-   
     
-    @IBAction func incrementCounter(_ sender: Any) {
+    
+    
+    @IBAction private func incrementCounter(_ sender: Any) {
         counter += 1
         addHistory("значение изменено на +1")
     }
     
-    @IBAction func decrementCounter(_ sender: Any) {
+    @IBAction private func decrementCounter(_ sender: Any) {
         if counter > 0 {
             counter -= 1
             addHistory("значение изменено на -1")
@@ -49,25 +49,25 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func refreshCounter(_ sender: Any) {
+    @IBAction private func refreshCounter(_ sender: Any) {
         counter = 0
         addHistory("значение сброшено")
     }
     
     
-    func addHistory(_ text: String) {
+    private   func addHistory(_ text: String) {
         counterHistoryTextView.text += "\(Date().dateTimeString): \(text)\n"
         
         let range = NSRange(location: counterHistoryTextView.text.count - 1, length: 1)
         counterHistoryTextView.scrollRangeToVisible(range)
     }
     
-   private func setUpTextView() {
-       
+    private  func setUpTextView() {
+        
         let paragraphStyle = NSMutableParagraphStyle()
-          paragraphStyle.lineSpacing = 6
-       counterHistoryTextView.isSelectable = false
-       counterHistoryTextView.isEditable = false
+        paragraphStyle.lineSpacing = 6
+        counterHistoryTextView.isSelectable = false
+        counterHistoryTextView.isEditable = false
         counterHistoryTextView.typingAttributes = [.paragraphStyle: paragraphStyle, .font: UIFont.systemFont(ofSize: 16)]
         counterHistoryTextView.text = "История изменений:\n"
     }
