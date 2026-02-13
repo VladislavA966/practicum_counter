@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bX-NB-4he">
-                                <rect key="frame" x="140.66666666666666" y="249.00000000000003" width="112" height="57.333333333333343"/>
+                                <rect key="frame" x="140.66666666666666" y="249.00000000000003" width="112" height="51.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="168" translatesAutoresizingMaskIntoConstraints="NO" id="NU1-DR-VJy">
-                                <rect key="frame" x="20" y="386.33333333333331" width="353" height="50"/>
+                                <rect key="frame" x="20" y="380.33333333333331" width="353" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfo-VX-OcQ">
                                         <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="50"/>
@@ -47,7 +47,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLj-sD-PSr">
-                                <rect key="frame" x="20" y="474" width="353" height="50"/>
+                                <rect key="frame" x="20" y="468" width="353" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="iJW-hm-Wys"/>
                                 </constraints>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7N0-uK-pvQ">
-                                <rect key="frame" x="20" y="558" width="353" height="300"/>
+                                <rect key="frame" x="20" y="552" width="353" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="9sg-PY-DP5"/>
@@ -81,6 +81,7 @@
                             <constraint firstItem="7bX-NB-4he" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="131" id="Hwk-PL-svd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7N0-uK-pvQ" secondAttribute="trailing" constant="20" id="Iuh-BR-sM5"/>
                             <constraint firstItem="NU1-DR-VJy" firstAttribute="centerX" secondItem="7bX-NB-4he" secondAttribute="centerX" id="NSx-jZ-Ur1"/>
+                            <constraint firstAttribute="bottom" secondItem="7N0-uK-pvQ" secondAttribute="bottom" id="ZxM-Sj-TQq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7N0-uK-pvQ" secondAttribute="trailing" constant="20" id="bi9-6a-l3p"/>
                             <constraint firstItem="NU1-DR-VJy" firstAttribute="top" secondItem="7bX-NB-4he" secondAttribute="bottom" constant="80" id="csu-x3-tad"/>
                             <constraint firstItem="XLj-sD-PSr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iTr-wS-yFx"/>
